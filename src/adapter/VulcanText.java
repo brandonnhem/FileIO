@@ -5,21 +5,17 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class EarthText implements EarthCellPhone {
-
-	public EarthText()
+public class VulcanText implements AlienCellPhone {
+	
+	public VulcanText()
 	{
 		
 	}
 	
 	@Override
-	public void sendMessage(String languageType, String fileName) throws InvalidLanguageException 
+	public void alienSendText(String fileName) 
 	{
 		String dir = System.getProperty("user.dir");
-		if (!languageType.equals("Earth") && !languageType.equals("Klingon") && !languageType.equals("Vulcan"))
-		{
-			throw new InvalidLanguageException("This language type is not supported.");
-		}
 		try
 		{
 			File file = new File(dir + "\\" + fileName);
@@ -50,7 +46,7 @@ public class EarthText implements EarthCellPhone {
 	}
 
 	@Override
-	public void readMessage(String fileName) 
+	public void alienReadText(String fileName) 
 	{
         String dir = System.getProperty("user.dir");
 
@@ -76,4 +72,9 @@ public class EarthText implements EarthCellPhone {
 		
 	}
 
+	@Override
+	public String translateText(String fileName) {
+		String translatedText = "Translated" + fileName;
+		return translatedText;
+	}
 }

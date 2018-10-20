@@ -5,16 +5,16 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class EarthText implements EarthCellPhone {
-
-	public EarthText()
-	{
-		
-	}
+public class UniversalTranslator implements EarthCellPhone{
 	
-	@Override
-	public void sendMessage(String languageType, String fileName) throws InvalidLanguageException 
+	private AlienCellPhone text;
+	public UniversalTranslator(AlienCellPhone message)
 	{
+		text = message;
+	}
+	@Override
+	public void sendMessage(String languageType, String fileName) throws InvalidLanguageException {
+		
 		String dir = System.getProperty("user.dir");
 		if (!languageType.equals("Earth") && !languageType.equals("Klingon") && !languageType.equals("Vulcan"))
 		{
@@ -28,7 +28,7 @@ public class EarthText implements EarthCellPhone {
 			String outputFile = userInput.nextLine();
 	        PrintWriter printWriter = new PrintWriter(outputFile);
 	        
-//	        userInput.close();
+	        userInput.close();
 	        
 	        Scanner input = new Scanner(file);
 			
@@ -48,11 +48,10 @@ public class EarthText implements EarthCellPhone {
 		}
 		
 	}
-
+	
 	@Override
-	public void readMessage(String fileName) 
-	{
-        String dir = System.getProperty("user.dir");
+	public void readMessage(String fileName) {
+		String dir = System.getProperty("user.dir");
 
 		try
 		{
@@ -73,7 +72,9 @@ public class EarthText implements EarthCellPhone {
 		{
 			 System.out.println("File: " + fileName + " does not exist.");
 		}
-		
+		System.out.print("Message Above Translated to Earth -> ");
+	 	text.alienReadText(text.translateText(fileName));
 	}
-
+	
+	
 }

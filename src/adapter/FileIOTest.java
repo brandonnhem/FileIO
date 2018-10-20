@@ -3,9 +3,25 @@ package adapter;
 public class FileIOTest {
 
 	public static void main(String[] args) throws InvalidLanguageException {
-		EarthText et = new EarthText();
-		et.readMessage("txtmessage.txt");
-		et.sendMessage("Earth", "txtmessage.txt");
+		
+		try {
+			EarthText et = new EarthText();
+			EarthText et2 = new EarthText();
+			et.sendMessage("Earth", "EarthText.txt");
+			et2.readMessage("txtmessage.txt");
+			UniversalTranslator ut = new UniversalTranslator(new KlingonText());
+			EarthCellPhone e3 = ut;
+			e3.readMessage("KlingonTextMessage.txt");
+			et.sendMessage("Vulcan", "VulcanTextMessage.txt");
+			ut = new UniversalTranslator(new VulcanText());
+			e3 = ut;
+			e3.readMessage("VulcanTextMessage.txt");
+			et.sendMessage("non-fed","nonFed.txt");
+		}
+		catch (InvalidLanguageException ile) {
+			System.out.println(ile.getMessage());
+		}
+		System.out.println("Done.");
 
 	}
 
