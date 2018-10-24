@@ -1,5 +1,14 @@
 package adapter;
 
+/**
+ * Brandon Nhem
+ * Anthony Pham
+ * October 24, 2018
+ * Purpose: A class that is reserved only for files that are written in Klingon
+ * Input: sendMessage(), readMessage()
+ * Output: translateText()
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -7,10 +16,19 @@ import java.util.Scanner;
 
 public class KlingonText implements AlienCellPhone {
 	
+	/**
+	 * Constructor class that is only meant for files that are written in Klingon
+	 */
+	
 	public KlingonText()
 	{
 		
 	}
+	
+	/**
+	 * Reads a file and create new file with the new message
+	 * @param fileName - The name of the file that is being copied
+	 */
 	
 	@Override
 	public void alienSendText(String fileName) 
@@ -44,6 +62,11 @@ public class KlingonText implements AlienCellPhone {
 		}
 		
 	}
+	
+	/**
+	 * Takes a file and displays it to the console
+	 * @param fileName - The name of the file to be read
+	 */
 
 	@Override
 	public void alienReadText(String fileName) 
@@ -71,6 +94,11 @@ public class KlingonText implements AlienCellPhone {
 		}
 		
 	}
+	
+	/**
+	 * Returns the file name of the file that is translated to EarthText
+	 * @return translatedText - The file name with the text that has been translated to EarthText
+	 */
 
 	@Override
 	public String translateText(String fileName) {
