@@ -6,7 +6,7 @@ package adapter;
  * October 24, 2018
  * Purpose: To handle a message (file) sent by an alien and read it back in EarthText 
  * Input: UniversalTranslator(), sendMessage(), readMessage()
- * Output: n/a
+ * Output: toString()
  */
 
 import java.io.File;

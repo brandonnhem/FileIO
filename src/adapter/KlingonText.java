@@ -5,8 +5,8 @@ package adapter;
  * Anthony Pham
  * October 24, 2018
  * Purpose: A class that is reserved only for files that are written in Klingon 
- * Input: sendMessage(), readMessage()
- * Output: translateText()
+ * Input: sendMessage(), readMessage(), translateText()
+ * Output: translateText(), toString()
  */
 
 import java.io.File;

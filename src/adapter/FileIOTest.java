@@ -4,7 +4,7 @@ package adapter;
  * Brandon Nhem
  * Anthony Pham
  * October 24, 2018
- * Purpose: Main class
+ * Purpose: Main class 
  * Input: n/a
  * Output: n/a
  */
