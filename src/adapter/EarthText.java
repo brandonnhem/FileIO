@@ -100,6 +100,11 @@ public class EarthText implements EarthCellPhone {
 		
 	}
 	
+	/**
+	 * Overrides toString method, just kinda says what it does
+	 * @return string of what this class does
+	 */
+	
 	public String toString()
 	{
 		return "Text message containing Earth text";

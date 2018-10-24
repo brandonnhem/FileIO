@@ -103,6 +103,11 @@ public class UniversalTranslator implements EarthCellPhone{
 	 	text.alienReadText(text.translateText(fileName));
 	}
 	
+	/**
+	 * Overrides toString method, just kinda says what it does
+	 * @return string of what this class does
+	 */
+	
 	public String toString()
 	{
 		return "Universal Translator for all supported languages";

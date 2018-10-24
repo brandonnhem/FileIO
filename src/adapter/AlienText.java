@@ -92,6 +92,11 @@ public class AlienText implements AlienCellPhone {
 		return "Translated" + fileName;
 	}
 	
+	/**
+	 * Overrides toString method, just kinda says what it does
+	 * @return string of what this class does
+	 */
+	
 	public String toString()
 	{
 		return "Class that allows for Klingon or Vulcan to be passed through the Universal Translator";
