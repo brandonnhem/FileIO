@@ -4,7 +4,7 @@ package adapter;
  * Brandon Nhem
  * Anthony Pham
  * October 24, 2018
- * Purpose: A class that is reserved only for files that are written in Klingon
+ * Purpose: A class that is reserved only for files that are written in Vulcan 
  * Input: sendMessage(), readMessage()
  * Output: translateText()
  */
@@ -104,5 +104,10 @@ public class VulcanText implements AlienCellPhone {
 	public String translateText(String fileName) {
 		String translatedText = "Translated" + fileName;
 		return translatedText;
+	}
+	
+	public String toString()
+	{
+		return "Text message containing Vulcan";
 	}
 }

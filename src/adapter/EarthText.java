@@ -4,7 +4,7 @@ package adapter;
  * Brandon Nhem
  * Anthony Pham
  * October 24, 2018
- * Purpose: A class that is reserved only for files that are written in Earth
+ * Purpose: A class that is reserved only for files that are written in Earth 
  * Input: sendMessage(), readMessage()
  * Output: n/a
  */
@@ -98,6 +98,11 @@ public class EarthText implements EarthCellPhone {
 			 System.out.println("File: " + fileName + " does not exist.");
 		}
 		
+	}
+	
+	public String toString()
+	{
+		return "Text message containing Earth text";
 	}
 
 }

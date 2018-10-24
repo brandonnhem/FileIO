@@ -4,7 +4,7 @@ package adapter;
  * Brandon Nhem
  * Anthony Pham
  * October 24, 2018
- * Purpose: To handle a message (file) sent by an alien and read it back in EarthText
+ * Purpose: To handle a message (file) sent by an alien and read it back in EarthText 
  * Input: UniversalTranslator(), sendMessage(), readMessage()
  * Output: n/a
  */
@@ -101,6 +101,11 @@ public class UniversalTranslator implements EarthCellPhone{
 		}
 		System.out.print("Message Above Translated to Earth -> ");
 	 	text.alienReadText(text.translateText(fileName));
+	}
+	
+	public String toString()
+	{
+		return "Universal Translator for all supported languages";
 	}
 	
 	
